@@ -1,4 +1,4 @@
-package com.ciber.pruebaspring;
+package com.example.pruebaspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
