@@ -1,8 +1,8 @@
 package com.example.pruebaspring.productos;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 
+//Entidad que representa la tabla producto
 public class Producto { 
     @Id
     private int id;
@@ -14,6 +14,8 @@ public class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    public Producto() {}
 
     public int getId() {
         return id;

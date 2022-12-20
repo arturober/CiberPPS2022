@@ -4,3 +4,5 @@ spring:
         username: example
         password: example
         driver-class-name: org.mariadb.jdbc.Driver
+
+logging.level.org.springframework.jdbc.core: TRACE
