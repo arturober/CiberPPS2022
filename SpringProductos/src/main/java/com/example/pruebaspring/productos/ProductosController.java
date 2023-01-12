@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,8 +22,12 @@ public class ProductosController {
     }
 
     @GetMapping
-    public List<Producto> getAll() {
-        return productosService.getAll();
+    public List<Producto> getAll(@RequestParam(required = false, defaultValue = "0") double cheaper) {
+        if(cheaper > 0) {
+            return productosService.findCheaper(cheaper);
+        } else {
+            return productosService.getAll();
+        }
     }
 
     @GetMapping("/{id}")

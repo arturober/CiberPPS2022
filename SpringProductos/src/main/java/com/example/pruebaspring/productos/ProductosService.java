@@ -16,6 +16,10 @@ public class ProductosService {
         return (List<Producto>)productosRepository.findAll();
     }
 
+    public List<Producto> findCheaper(double precio) {
+        return productosRepository.findByPrecioLessThan(precio);
+    }
+
     public Producto getById(int id) {
         return productosRepository.findById(id).orElse(null);
     }
