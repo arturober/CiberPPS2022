@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        url: jdbc:mariadb://arturober.com:3306/productos_login
+        username: ciber
+        password: seguridad
+        driver-class-name: org.mariadb.jdbc.Driver
+
+logging.level.org.springframework.jdbc.core: TRACE
